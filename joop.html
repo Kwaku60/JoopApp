@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans+Condensed:300|Shadows+Into+Light|Titillium+Web" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 <!-- meeting instead of todo. meetings for todos. and text instead of item -->
@@ -19,24 +21,24 @@
         <div class="friend-div" class="col-md-5">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Serenity Victoria</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Seeing Next: </div>
                 <div class="last-meet-text text editing-test" ng-class="{'editing-text': editing, 'edited': meeting.edited}" ng-hide="editing">{{meeting.content}}</div>
                 <textarea  class="last-meet-text-editing" placeholder="trying that recipe we learned at the festival..."  ng-blur="editing = false;"  ng-show="editing"  ng-model="meeting.content" class="editing-text" type="text" rows="4"/></textarea>
                 <button class=" btn btn-sm btn-danger update" ng-click="editing = !editing">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <div class="next-meet-text" ng-class="{'editing-text': editing2, 'edited': meeting.edited}" ng-hide="editing2"> {{meeting.content}}</div>
                 <textarea  class="last-meet-text-editing" placeholder="Cinco de Mayo celebration!"  ng-blur="editing2 = false;"  ng-show="editing2"  ng-model="meeting.content" class="editing-text" type="text" rows="4"/></textarea>
                 <button class=" btn btn-sm btn-danger update" ng-click="editing2 = !editing2">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-1" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-1" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-1">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -51,19 +53,19 @@
                 <div class="friend-name">Neil Denver</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Seeing Next: </div>
                 <div class="last-meet-text">waiting for my text back...</div>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <div class="next-meet-text"> Drinks with his coworkers</div>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-2" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-2" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-2">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -78,19 +80,19 @@
                 <div class="friend-name">Lane Doggart</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Seeing Next: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
                     <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-3" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <div class="times-seen-num" id="times-seen-display-3" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-3">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -105,19 +107,19 @@
                 <div class="friend-name">Wendy Lou</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading"> Seeing Next: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
                     <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-4" type="text" id="times-seen">Zero</div>
+                    <div class="times-seen-num" id="times-seen-display-4" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-4">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -131,22 +133,22 @@
                 <div class="friend-div" class="col-md-5" id="fd-5" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Sally Cruzan</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Seeing Next: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-5" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-5" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-5">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -165,22 +167,22 @@
          <div class="friend-div" class="col-md-5" id="fd-6" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Finley Cam</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-6" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-6" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-6">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -193,22 +195,22 @@
                  <div class="friend-div" class="col-md-5" id="fd-7" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Samantha Dodge</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-7" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-7" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-7">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -226,22 +228,22 @@
                  <div class="friend-div" class="col-md-5" id="fd-8" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">DavDodge</div>
+                <div class="friend-name">Gerard Dane</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-8" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-8" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-8">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -257,22 +259,22 @@
  <div class="friend-div" class="col-md-5" id="fd-9" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Wallace Undu</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-9" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-9" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-9">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -286,22 +288,22 @@
  <div class="friend-div" class="col-md-5" id="fd-10" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">January Fay</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-10" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-10" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-10">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -315,22 +317,22 @@
                 <div class="friend-div" class="col-md-5" id="fd-11" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Milo Danver</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-11" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-11" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-11">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -345,22 +347,22 @@
                  <div class="friend-div" class="col-md-5" id="fd-12" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Hiromi Fujino</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-12" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-12" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-12">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -375,22 +377,22 @@
                  <div class="friend-div" class="col-md-5" id="fd-13" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Stan Goto</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-13" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-13" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-13">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -405,22 +407,22 @@
  <div class="friend-div" class="col-md-5" id="fd-14" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Fatima Dow</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-14" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-14" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-14">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>
@@ -436,22 +438,22 @@
                  <div class="friend-div" class="col-md-5" id="fd-15" style="display:none">
             <div class="col-sm-2">
                 <div class="friend-image"></div>
-                <div class="friend-name">Davis Dodge</div>
+                <div class="friend-name">Brett Ashley</div>
             </div>
             <div class="col-sm-3">
-                <div class="last-meet-heading">Next Hang: </div>
+                <div class="last-meet-heading">Next Seeing: </div>
                 <textarea placeholder="trying that recipe we learned at the festival..." class="form-control last-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-3">
-                <div class="next-meet-heading">Last Hang: </div>
+                <div class="next-meet-heading">Last Seen: </div>
                 <textarea placeholder="Cinco de Mayo festival..." class="form-control next-meet-text" rows="4"></textarea>
                 <button class=" btn btn-sm btn-danger update">update</button>
             </div>
             <div class="col-sm-4 interactive">
                 <div class="profile-buttons">
-                    <label for="times-seen" class="times-seen">Times Seen this Month:</label>
-                    <div class="times-seen" id="times-seen-display-15" placeholder="Zero" type="text" id="times-seen">Zero</div>
+                    <label for="times-seen" class="times-seen">X's Seen this Month:</label>
+                    <div class="times-seen-num" id="times-seen-display-15" placeholder="Zero" type="text" id="times-seen">Zero</div>
                     <div class="div-buttons">
                         <button class="btn btn-sm btn-danger add-int" id="add-int-15">+</button>
                         <button class="btn btn-sm btn-danger reset-int">o</button>

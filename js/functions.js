@@ -1,20 +1,21 @@
-var meetingCount = 0;
+// var meetingCount = 0;
 
 
-function displayValue(display){
+function displayValue(display, friendCount){
 
 //fix: right now meeting count doesn't distinguish which button is clicked. 
 //every time the function runs the display value will increase
 //inside of whichever div you happen to be clicking
-meetingCount += 1;
 
 
 
-switch(meetingCount){
+
+switch(friendCount){
 
 	case 1:
 display.empty();
 display.append("One");
+
 
 //update number view
 //css div color change
@@ -24,6 +25,7 @@ break;
 case 2:
 display.empty();
 display.append("Two");
+
 
 
 //update number view
