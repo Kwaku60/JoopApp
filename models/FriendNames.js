@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var LastSees = sequelize.define("LastSees", {
-    body: {
+  var FriendNames = sequelize.define("FriendNames", {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -29,11 +29,11 @@ updateId: {
 
 
     {
-    
+   
       classMethods: {
         associate: function(models) {
-          
-          LastSees.belongsTo(models.User, {
+         
+          FriendNames.belongsTo(models.User, {
             // //can manually set foreign key equal to the user email
             // //id of posts will be foreign key for the user. 
             // foreignKey: {
@@ -45,5 +45,5 @@ updateId: {
       }
     
   });
-  return LastSees;
+  return FriendNames;
 };

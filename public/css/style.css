@@ -107,6 +107,12 @@ border-radius: 12px;
 }
 
 
+#instruction{
+
+	color:red;
+	font-family: 'Kaushan Script', cursive;
+}
+
 .friend-div{
 
 	background-color: white;
@@ -145,17 +151,29 @@ top:212px;
 		margin-left: 20px;
 		color:red;
 		border-radius: 20px;
+		padding: 6px 6px 6px 6px;
+		border: solid white 2px;
+
+}
+
+.name-update{
+	position: relative;
+	top:220px;
+	right:647px;
+	width:19px;
+	height:16px;
+	font-size: 10px;
+	background-color: maroon;
+	border: solid plum 2px;
+	border-radius: 9px;
+	padding-left: 5px;
+
 
 }
 
 
 .next-meet-heading{
 
-/*	margin-right: 40px;
-	height: 8px;
-	position:absolute;
-	left: 683px;
-	margin-top: 12px;*/
 	margin-top: 72px;
 	margin-left: 8px;
 	color:red;

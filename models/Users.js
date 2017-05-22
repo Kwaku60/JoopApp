@@ -33,16 +33,30 @@ module.exports = function(sequelize, DataTypes) {
 
 
         {
-        //     classMethods: {
-        //         associate: function(models) {
-        //             // Associating Author with Posts
-        //             // When an Author is deleted, also delete any associated Posts
-        //             User.hasMany(models.Meets, {
-        //                 onDelete: "cascade"
-        //             });
-        //         }
+            classMethods: {
+                associate: function(models) {
+                  
+                    User.hasMany(models.FriendNames, {
+                        onDelete: "cascade"
+                    });
+                },
 
-            // },
+
+                associate: function(models) {
+                    
+                    User.hasMany(models.LastSees, {
+                        onDelete: "cascade"
+                    });
+                },
+
+                 associate: function(models) {
+                    
+                    User.hasMany(models.NextSees, {
+                        onDelete: "cascade"
+                    });
+                }
+
+            },
             // Creating a custom method for our User model. This will check if an unhashed password entered by
             // The user can be compared to the hashed password stored in our database
             instanceMethods: {

@@ -47,6 +47,23 @@ module.exports = function(app) {
     }
   });
 
+//grab friend names
+app.get("/api/friends/:id", function(req, res) {
+
+   
+    db.FriendNames.findAll({
+      where: {
+        userEmail: req.params.id
+      },
+      include: [db.User]
+    }).then(function(dbFriendNames) {
+      res.json(dbFriendNames);
+
+    });
+
+  });
+
+
 
 
 
@@ -55,13 +72,13 @@ module.exports = function(app) {
 app.get("/api/next/:id", function(req, res) {
 
    
-    db.NextSee.findAll({
+    db.NextSees.findAll({
       where: {
         userEmail: req.params.id
       },
       include: [db.User]
-    }).then(function(dbNextSee) {
-      res.json(dbNextSee);
+    }).then(function(dbNextSees) {
+      res.json(dbNextSees);
 
     });
 
@@ -70,33 +87,43 @@ app.get("/api/next/:id", function(req, res) {
 
 
 
-
-//grab Last Seen posts
+//grab Last See posts
 app.get("/api/last/:id", function(req, res) {
 
    
-    db.LastSee.findAll({
+    db.LastSees.findAll({
       where: {
         userEmail: req.params.id
       },
       include: [db.User]
-    }).then(function(dbLastSee) {
-      res.json(dbLastSee);
+    }).then(function(dbLastSees) {
+      res.json(dbLastSees);
 
     });
 
   });
 
+//create a name
+app.post("/api/friends", function(req, res) {
+    db.FriendNames.create(req.body).then(function(dbFriendNames) {
+      res.json(dbFriendNames);
+    });
+  });
+
+
+
+//create next see post
 app.post("/api/next", function(req, res) {
-    db.NextSee.create(req.body).then(function(dbNextSee) {
-      res.json(dbNextSee);
+    db.NextSees.create(req.body).then(function(dbNextSee) {
+      res.json(dbNextSees);
     });
   });
 
 
+//create last see post
 app.post("/api/last", function(req, res) {
-    db.LastSee.create(req.body).then(function(dbNextSee) {
-      res.json(dbNextSee);
+    db.LastSees.create(req.body).then(function(dbLastSees) {
+      res.json(dbLastSees);
     });
   });
 

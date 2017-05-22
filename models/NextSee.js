@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var NextSee = sequelize.define("NextSee", {
+  var NextSees = sequelize.define("NextSees", {
     body: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,11 +29,11 @@ updateId: {
 
 
     {
-      // We're saying that we want our Author to have Posts
+     
       classMethods: {
         associate: function(models) {
-          // An Author (foreignKey) is required or a Post can't be made
-          NextSee.belongsTo(models.Users, {
+         
+          NextSees.belongsTo(models.User, {
             // //can manually set foreign key equal to the user email
             // //id of posts will be foreign key for the user. 
             // foreignKey: {
@@ -45,5 +45,5 @@ updateId: {
       }
     
   });
-  return LastSee;
+  return NextSees;
 };
