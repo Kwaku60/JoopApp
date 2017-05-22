@@ -200,7 +200,7 @@ function updateName(userName) {
 	// alert("submitting name");
             //post the newName object to the database to the FriendNames table 
             $.post("/api/friends", newName, function() {
-                window.location.href = "/members";
+                // window.location.href = "/members";
             });
 
             //end of submitName function        
@@ -238,7 +238,7 @@ function updateLast(userName) {
     //update name on submit/ on click
     $(".last").on("click", function() {
 
-	alert("last on click");
+	// alert("last on click");
 
         console.log(this.id)
         var IdValue = this.id
@@ -269,7 +269,7 @@ function updateLast(userName) {
 console.log(newLastPost);
 
         function submitLast() {
-	alert("submitting Last");
+	// alert("submitting Last");
 
             //post the newLastPost object to the database to the LastSee table 
             $.post("/api/last", newLastPost, function() {
@@ -301,7 +301,7 @@ function updateNext(userName) {
     //update name on submit/ on click
     $(".next").on("click", function() {
 
-alert("updatenext on click");
+// alert("updatenext on click");
 
         console.log(this.id)
         var IdValue = this.id
@@ -333,7 +333,7 @@ alert("updatenext on click");
 
         function submitNext() {
 
-alert("submitting next");
+// alert("submitting next");
             //post the newLastPost object to the database to the LastSee table 
             $.post("/api/next", newNextPost, function() {
                 window.location.href = "/members";
