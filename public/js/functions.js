@@ -30,6 +30,15 @@ $("#profile-friend-name").append(friendName);
 
 
 
+
+
+
+
+
+
+
+
+
 function displayValue(display, friendCount){
 
 //fix: right now meeting count doesn't distinguish which button is clicked. 

@@ -64,6 +64,25 @@ app.get("/api/friends/:id", function(req, res) {
   });
 
 
+app.get("/api/profileText/:id/:updateId", function(req,res){
+
+   
+    db.LastSees.findAll({
+      where: {
+        userEmail: req.params.id,
+        updateId: req.params.updateId
+      },
+      include: [db.User]
+    }).then(function(dbLastSees) {
+      res.json(dbLastSees);
+
+    });
+
+
+
+})
+
+
 
 
 

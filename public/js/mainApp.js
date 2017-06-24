@@ -235,11 +235,10 @@ function updateName(userName) {
 
 function updateLast(userName) {
 
-	// alert("updating last function");
+
     //update name on submit/ on click
     $(".last").on("click", function() {
 
-	// alert("last on click");
 
         console.log(this.id)
         var IdValue = this.id
@@ -270,7 +269,7 @@ function updateLast(userName) {
 console.log(newLastPost);
 
         function submitLast() {
-	// alert("submitting Last");
+	
 
             //post the newLastPost object to the database to the LastSee table 
             $.post("/api/last", newLastPost, function() {
@@ -356,28 +355,5 @@ function updateNext(userName) {
 
 
 
-
-
-//**** profile functionality *****
-
-
-
-$("#previous-hangouts-list-head").on("click",function(){
-
-
-
-    $("#photo-collection").hide();
-    $("#memory-well").show();
-
-
-})
-
-
-    $("#photos-collection-head").on("click", function(){
-
-
-
-$("#photo-collection").show();
-    });
 
 
