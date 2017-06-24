@@ -11,6 +11,7 @@
 
 function insertContent(myField, myValue) {
     //IE support
+
     if (document.selection) {
         myField.focus();
         sel = document.selection.createRange();
@@ -353,5 +354,30 @@ function updateNext(userName) {
 };
 
 
+
+
+
+
+//**** profile functionality *****
+
+
+
+$("#previous-hangouts-list-head").on("click",function(){
+
+
+
+    $("#photo-collection").hide();
+    $("#memory-well").show();
+
+
+})
+
+
+    $("#photos-collection-head").on("click", function(){
+
+
+
+$("#photo-collection").show();
+    });
 
 

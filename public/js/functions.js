@@ -1,4 +1,33 @@
-// var meetingCount = 0;
+
+function grabFriendName(profileId){
+
+
+//use the passed profile idvalue to grab the friend name from the relevant textbox
+console.log(profileId);
+var friendNameContain = $("#friend-name-" + profileId);
+
+console.log(friendNameContain);
+//grab the inner html 
+
+var friendName = friendNameContain[0].value;
+console.log(friendName);
+
+var profileViewName = $("#profile-friend-name");
+$("#profile-friend-name").empty();
+$("#profile-friend-name").append(friendName);
+
+
+
+		// insertContent(profileViewName,friendName);
+
+//append that friend name to the textbox in profile viewer. 
+
+}
+
+
+
+
+
 
 
 function displayValue(display, friendCount){

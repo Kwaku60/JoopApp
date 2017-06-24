@@ -238,7 +238,13 @@ top:212px;
 
 
 
+.profile-view{
 
+	border-radius: 6px;
+	position: relative;
+	bottom:58px;
+	left:180px;
+}
 
 
 
@@ -250,13 +256,15 @@ top:212px;
 
 
 }
+
+
 .profile-buttons{
 
 	color:red;
 	float:right;
 	width: 315px;
 /*	border: solid gray 2px;*/
-	margin-top: 65px;
+	margin-top: 45px;
 	margin-right: 10px;
 }
 
@@ -294,7 +302,6 @@ top:212px;
 .times-seen{
 
 	margin-left: 76px;
-	margin-top: 6px;
 	height:22px;
 }
 
@@ -347,3 +354,143 @@ height:100px;
 	margin-bottom: 40px;
 }
 
+/*=======*/
+/*profile pages*/
+/*=======*/
+
+
+#profile-friend-image{
+
+width: 200px;
+height: 260px;
+
+}
+
+
+#profile-friend-name{
+
+	width: 175px;
+	position: relative;
+	bottom:40px;
+	left:20px;
+
+}
+
+#previous-hangouts-list-head{
+
+	margin-left: 100px;
+	font-size: 15px;
+	color: white;
+	width:120px;
+	height:30px;
+
+	float: left;
+	position: relative;
+	top: 14px;
+	
+}
+
+
+#previous-hangouts-list-head:hover{
+
+	color:plum;
+}
+
+#photos-collection-head{
+	margin-left: 8px;
+	font-size: 15px;
+	color: gold;
+	width:120px;
+	height:30px;
+	position:relative;
+	top:14px;
+
+}
+
+
+#photos-collection-head:hover{
+
+	color:plum;
+}
+
+
+
+
+
+#previous-hangouts{
+
+	border: solid red 2px;
+	height: 420px;
+	width:620px;
+	margin-left: 100px;
+	margin-bottom: 80px;
+	background-color: white;
+}
+
+#hangout-history{
+
+	border: solid maroon 3px;
+	margin-left: 140px;
+	height: 450px;
+	width: 580px;
+	overflow: scroll;
+}
+
+#jumbo{
+
+	border: solid maroon 2px;
+	width: 800px;
+	height: 600px;
+	padding-bottom: 15px;
+	overflow: scroll;
+	margin-left: 200px;
+	background-color: maroon;
+	position: fixed;
+	top:14px;
+
+	z-index: 30;
+	display: none;
+
+
+}
+
+
+#profile-friend-image{
+
+	position: relative;
+	bottom: 56px;
+	left: 16px;
+}
+
+.exit-profile{
+
+	position: absolute;
+	top:10px;
+	right:8px;
+}
+
+#photo-collection{
+background-color: rgba(255, 215, 0,.82);
+	border: solid black 2px;
+	height:418px;
+	z-index: 40px;
+	position:relative;
+	bottom:417px;
+	left:12px;
+	display:none;
+	width: 619px;
+
+
+}
+
+
+#memory-well{
+
+background-color: rgba(221, 160, 221,.7);
+	border: solid pink 2px;
+	height: 418px;
+	width: 619px;
+	position:relative;
+	left:12px;
+
+}

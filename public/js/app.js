@@ -173,17 +173,35 @@ window.location.href = "/logout";
 })
 
 
+// ======
+//functionality for friend profile
+// =====
+
+$(".profile-view").on("click",function(){
+
+
+	var profileIdFull = this.id;
+
+//trim the id to get the value
+	var profileId =  profileIdFull.slice(13);
+	console.log(profileId);
+
+
+//grab user name
+grabFriendName(profileId);
+
+	$("#jumbo").show();
+
+});
+
+
+$(".exit-profile").on("click", function(){
+
+
+	$("#jumbo").hide();
+})
 
 
 
 
 
-
-
-// $(".update").on("click", function(){
-
-
-// });
-
-
-//add friend will just display already made divs. total of 20 friends
