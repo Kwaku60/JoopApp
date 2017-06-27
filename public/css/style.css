@@ -509,3 +509,37 @@ background-color: rgba(221, 160, 221,.7);
 	overflow: scroll;
 	border: solid maroon 2px;
 }
+
+
+#uploaded-profile{
+
+	border: solid plum 2px;
+	width: 90px;
+	height: 80px;
+}
+
+/*.uploaded-profile{
+
+	color:white;
+	padding-top: 50px;
+	font-size: 15px;
+}*/
+
+.logo{
+
+	border-radius: 30px;
+	border: solid plum 2px;
+	overflow:contain;
+	position:relative;
+	bottom:5px;
+	right:3px;
+	background-color: AntiqueWhite;
+	padding-left: .5px;
+
+}
+
+.img-polaroid{
+
+
+
+}
