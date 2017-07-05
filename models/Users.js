@@ -41,6 +41,13 @@ module.exports = function(sequelize, DataTypes) {
                     });
                 },
 
+                associate: function(models) {
+                  
+                    User.hasMany(models.FriendProfileImages, {
+                        onDelete: "cascade"
+                    });
+                },
+
 
                 associate: function(models) {
                     

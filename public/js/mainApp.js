@@ -43,6 +43,8 @@ var userName = data.email
 
 getFriendNames(userName);
 
+getProfilePhotos(userName);
+
 updateName(userName);
 
 getLastPosts(userName);
@@ -88,6 +90,57 @@ $.get("/api/friends/" + userName, function(data) {
 
 //end of get friends function
 }
+
+
+function getProfilePhotos(userName){
+
+
+$.get("/api/profilePhoto/" + userName, function(data){
+
+console.log("grabbing pro pics");
+
+
+    for(var a = 0; a<data.length; a++){
+
+        var placer = data[a].updateId
+        var photoBinary = data[a].image
+
+        var photoHold = document.getElementById("friend-photo-" + placer);
+
+       photoHold.setAttribute("src", photoBinary);
+
+//set the source of the photo
+     
+     //end of loop  
+    }
+
+
+
+
+
+
+
+
+ // end of get profile photos request   
+})
+
+
+
+
+
+//end of get Profile Photos function
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

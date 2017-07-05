@@ -114,7 +114,13 @@ $("#memory-well").append(entryHold);
 $(".logo").click(function(){
 
 var relevantPhotoId = this.id;
+
+
 console.log(relevantPhotoId);
+//grab the id value for storage in the database
+		var IdValue = relevantPhotoId.slice(13)
+		console.log(IdValue);
+
 
 var relevantPhoto = document.getElementById(relevantPhotoId);
 
@@ -139,33 +145,47 @@ relevantInput.click();
 
 })
 
+
+	
+
+
+
+
  function onFileLoad(e) {
                         var data = e.target.result;
+                        var binaryValue = data;
                           relevantPhoto.setAttribute("src",data);
                           // console.log(data)
                           //the data is the binary version of the image.
                           //Upload the image to the database
                            //Save data on keydown
-                            $.post('test.php',
+                            // $.post('test.php',
 
-                                {data:relevantPhoto.getAttribute("src")},
+//grab user info in order to store to the database
+	$.get("/api/user_data").then(function(data) {
 
+  	var user = data.email;
+  	console.log(user);
+  	
+//create an object to send to database to prepare for posting
 
-                                function(){
+                            var ProfilePhotoData = {
 
-
-                                //save data with updateId and User email
-
-                                //this way when they sign in we can load all of the photos. and append it to the relevant divs. When view profile is selected, use this to match the update Id and grab the relevant photos. 
-
-                                //load all photos associated with userEmail AND friend update div and appen it into the photos. 
-
-                            });
+                            	image: binaryValue,
+                            	updateId: IdValue,
+                            	userEmail: user
                             }
 
+ $.post("/api/profilePhoto", ProfilePhotoData, function() {
 
 
+                // window.location.href = "/members";
+        
+                       
 
+
+                        
+                     console.log("photo saved to database");
 
 
 
@@ -174,50 +194,18 @@ relevantInput.click();
 
 
 
+//have a get request for profilePhoto which you call on page load with the others. 
+//set the photo source as the binary value
+
+//end of get user info request
+  })
+
+
+}
 
 
 
-
-//original logic
-
-
-
-// $('img#logo').click(function(){                           
-//     $('#logoupload').trigger('click');
-//     $('#logoupload').change(function(e){
-
-//       var reader = new FileReader(),
-//            files = e.dataTransfer ? e.dataTransfer.files : e.target.files,
-//             i = 0;
-
-//             reader.onload = onFileLoad;
-
-//              while (files[i]) reader.readAsDataURL(files[i++]);
-
-//               });
-
-//                 function onFileLoad(e) {
-//                         var data = e.target.result;
-//                           $('img#logo').attr("src",data);
-//                           // console.log(data)
-//                           //the data is the binary version of the image.
-//                           //Upload the image to the database
-//                            //Save data on keydown
-//                             $.post('test.php',
-
-//                                 {data:$('img#logo').attr("src")},
+//end of logo onClick function 
+});
 
 
-//                                 function(){
-
-
-//                                 //save data with updateId and User email
-
-//                                 //this way when they sign in we can load all of the photos. and append it to the relevant divs. When view profile is selected, use this to match the update Id and grab the relevant photos. 
-
-//                                 //load all photos associated with userEmail AND friend update div and appen it into the photos. 
-
-//                             });
-//                             }
-
-//                         });

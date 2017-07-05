@@ -443,10 +443,10 @@ height: 260px;
 	height: 600px;
 	padding-bottom: 15px;
 	overflow: scroll;
-	margin-left: 200px;
+	margin-left: 252px;
 	background-color: maroon;
 	position: fixed;
-	top:14px;
+	top:54px;
 
 	z-index: 30;
 	display: none;
@@ -518,12 +518,7 @@ background-color: rgba(221, 160, 221,.7);
 	height: 80px;
 }
 
-/*.uploaded-profile{
 
-	color:white;
-	padding-top: 50px;
-	font-size: 15px;
-}*/
 
 .logo{
 
@@ -538,8 +533,179 @@ background-color: rgba(221, 160, 221,.7);
 
 }
 
-.img-polaroid{
+
+/*====================*/
+/*//schedule styling*/
+/*===================*/
 
 
 
+
+#schedule-jumbo{
+
+	border: solid red 3px;
+	width: 1060px;
+	height: 600px;
+	padding: 5px 5px 5px 5px;
+	z-index: 400;
+	margin-left: 140px;
+	position:fixed;
+	left: 32px;
+	overflow: scroll;
+	background-color: maroon;
+	top:124px;
+	display: none;
+}
+
+
+.days{
+
+	border: solid red 2px;
+	width: 140px;
+	height: 200px;
+	margin-left:2px;
+	background-color: white;
+
+}
+
+.weekend-days{
+
+border: solid maroon 2px;
+background-color: white;
+	width: 140px;
+	height: 200px;
+
+}
+
+
+#weekday-row{
+
+margin-left: 80px;
+margin-top: 25px;
+
+}
+
+#weekend-row{
+
+margin-left: 320px;
+margin-top:50px;
+
+}
+
+.add-to-sched{
+
+	background-color: red;
+	color:white;
+	width: 30px;
+	height:32px;
+	padding: 3px 3px 3px 3px;
+	position:relative;
+	top:60px;
+	left:50px;
+/*	border: solid maroon 1px;*/
+}
+
+.add-to-sched:hover{
+
+	background-color: maroon;
+}
+
+#feature-description{
+
+	color: white;
+	margin-left: 14px;
+}
+
+.day-title{
+
+	color: white;
+	margin-left: 32px;
+}
+
+#refresh-week{
+
+	background-color: plum;
+	margin-right: 38px;
+	border:solid red 1.38px;
+
+}
+
+#refresh-week:hover{
+
+	background-color: indigo;
+}
+
+#friend-list-quick{
+
+/*	background-color: #ffb833;*/
+	background-color: rgba(128, 0, 0,.90);
+	height: 160px;
+	width: 120px;
+	position: fixed;
+	z-index: 300;
+	top:273px;
+	left:539px;
+	border: solid brown 1.2px;
+	overflow:scroll;
+	display: none;
+
+}
+
+
+.friend-list-name-item{
+
+	background-color: white;
+	border: solid whitesmoke 1.2px;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 100px;
+	height: 45px;
+	font-size: 15px;
+	border-radius: 4.5px;
+	padding-left:30px;
+	color: plum;
+}
+
+.friend-list-name-item:hover{
+	background-color: whitesmoke;
+
+}
+
+
+#exit-friend-list-quick{
+
+	color: plum;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+
+#exit-friend-list-quick:hover{
+
+	font-size: 17px;
+}
+
+#exit-schedule{
+
+	background-color: indigo;
+	margin-left: 970px; 
+	margin-top: 23px;
+}
+
+
+#view-schedule{
+
+	color: orange;
+	font-size: 28px;
+	width: 230px;
+	margin-left: 1034px;
+	position:relative;
+	top:55px;
+	border-bottom: solid orange 4px;
+}
+
+#view-schedule:hover{
+
+	color:silver;
+	border-color: red;
 }

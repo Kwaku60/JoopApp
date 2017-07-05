@@ -64,6 +64,46 @@ app.get("/api/friends/:id", function(req, res) {
   });
 
 
+app.post("/api/profilePhoto", function(req,res){
+
+
+    db.FriendProfileImages.create(
+
+    { image: req.body.binary,
+      userEmail: req.body.userEmail,
+      updateId: req.body.updateId
+
+    } 
+
+).then(function(FriendProfileImages) {
+      res.json(FriendProfileImages);
+    });
+
+
+})
+
+
+
+app.get("/api/profilePhoto/:id", function(req,res){
+
+
+db.FriendProfileImages.findAll({
+
+where: {
+
+  userEmail: req.params.id
+},
+
+}).then(function(dbFriendNProfileImages) {
+      res.json(dbFriendNProfileImages);
+
+    });
+
+
+})
+
+
+
 app.get("/api/profileText/:id/:updateId", function(req,res){
 
    
