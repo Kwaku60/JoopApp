@@ -1,44 +1,43 @@
-
 // ==================================
 // Basic Schedule Jumbo Functionality 
 // ==================================
 var userName;
 
 
-$(".add-to-sched").on("click",function(){
+$(".add-to-sched").on("click", function() {
 
-var selectedDay = this.id;
+    var selectedDay = this.id;
 
-$("#friend-list-quick").show();
+    $("#friend-list-quick").show();
 
-grabQuickFriendList(selectedDay);
+    grabQuickFriendList(selectedDay);
 
 });
 
 
 
-$("#exit-friend-list-quick").on("click", function(){
+$("#exit-friend-list-quick").on("click", function() {
 
-$("#friend-list-quick").hide();
-
-})
-
-$("#exit-schedule").on("click", function(){
-
-$("#schedule-jumbo").hide();
+    $("#friend-list-quick").hide();
 
 })
 
-$("#view-schedule").on("click", function(){
+$("#exit-schedule").on("click", function() {
 
-	$("#schedule-jumbo").show();
+    $("#schedule-jumbo").hide();
+
+})
+
+$("#view-schedule").on("click", function() {
+
+    $("#schedule-jumbo").show();
 })
 
 
 
-$("#refresh-week").on("click", function(){
+$("#refresh-week").on("click", function() {
 
-	$(".future-plan-well").empty();
+    $(".future-plan-well").empty();
 })
 
 
@@ -54,177 +53,141 @@ $("#refresh-week").on("click", function(){
 
 
 
-function grabQuickFriendList(selectedDay){
+function grabQuickFriendList(selectedDay) {
 
-$("#friend-list-quick-well").empty();
+    $("#friend-list-quick-well").empty();
 
-	$.get("/api/user_data").then(function(data) {
+    $.get("/api/user_data").then(function(data) {
 
- userName = data.email
+        userName = data.email
 
-$.get("/api/friendsQuick/" + userName, function(data) {
+        $.get("/api/friendsQuick/" + userName, function(data) {
 
-console.log(data);
+            console.log(data);
 
-	for(var a = 0; a<data.length; a++){
+            for (var a = 0; a < data.length; a++) {
 
-		 var nameHold = $("<div>");
-		 nameHold.addClass("friend-list-name-item");
-		 nameHold.attr("id", "quick-friend-" + a);
-		 nameHold.append(data[a].name);
-		 $("#friend-list-quick-well").append(nameHold);
-
-
-
-//end of loop
-	}
-
-$(".friend-list-name-item").on("click", function(){
-
-	
-
- var friendNameId = this.id;
-
- console.log(this.innerHTML);
-
- // var name = $("#" + friendNameId);
-
- // var ex = name.text();
- // var ex2 = name.contents();
-
- var participatingFriend = this.innerHTML;
+                var nameHold = $("<div>");
+                nameHold.addClass("friend-list-name-item");
+                nameHold.attr("id", "quick-friend-" + a);
+                nameHold.append(data[a].name);
+                $("#friend-list-quick-well").append(nameHold);
 
 
 
+                //end of loop
+            }
+
+            $(".friend-list-name-item").on("click", function() {
 
 
- updateSchedule(friendNameId, selectedDay, participatingFriend);
 
-});
+                var friendNameId = this.id;
+
+                console.log(this.innerHTML);
+
+                // var name = $("#" + friendNameId);
+
+                // var ex = name.text();
+                // var ex2 = name.contents();
+
+                var participatingFriend = this.innerHTML;
 
 
-//end of get friends names request
-})
 
-//end of user data request 
 
-return userName;
 
-})
+                updateSchedule(friendNameId, selectedDay, participatingFriend);
 
-//end of grabQuickFriendList function
+            });
+
+
+            //end of get friends names request
+        })
+
+        //end of user data request 
+
+        return userName;
+
+    })
+
+    //end of grabQuickFriendList function
 }
 
 
-function updateSchedule(friendNameId, selectedDay, participatingFriend){
+function updateSchedule(friendNameId, selectedDay, participatingFriend) {
 
-var idValueRaw = friendNameId.slice(13);
-
-
+    var idValueRaw = friendNameId.slice(13);
 
 
 
 
-// ***BUG FIX****
-//remove below line
-// var idValue = parseInt(idValueRaw) +1;
-
-var primaryValue = parseInt(idValueRaw) 
-
-// switch (primaryValue) {
-
-// case primaryValue == 0 :
-
- var idValue = primaryValue +1; 
 
 
-// return idValue; 
+  
 
-// break;
-
-// default:
-
-//  idValue = primaryValue 
-
-// return idValue;
-
-// }
+    var primaryValue = parseInt(idValueRaw)
 
 
-// if(primaryValue == 0){
-
-// 	idValue = primaryValue +1;
-// 	alert(idValue);
-
-// 	// return idValue;
-// } else{
-
-
-// 	idValue = primaryValue;
-// 	alert(idValue);
-// 	// return idValue;
-// }
-
-// alert("a");
-
-// alert(idValue);
+    var idValue = primaryValue + 1;
 
 
 
-$.get("/api/user_data").then(function(data) {
-
-var userName = data.email;
 
 
-//create an object to send to database to grab relevant plans 
+    $.get("/api/user_data").then(function(data) {
 
-var friendScheduleInfo = {
+        var userName = data.email;
 
-			userEmail: userName,
-			updateId: idValue
 
+        //create an object to send to database to grab relevant plans 
+
+        var friendScheduleInfo = {
+
+            userEmail: userName,
+            updateId: idValue
+
+        }
+
+        console.log(friendScheduleInfo);
+
+        //grab the next see associated with both the username and the position
+
+        $.get("/api/schedule/" + userName + "/" + idValue, function(data) {
+
+
+
+
+            var futurePlan = data[0].body;
+
+
+            //create a container for the futurePlan
+            var futurePlanHold = $("<div>");
+            futurePlanHold.addClass("future-plan-hold");
+            var futurePlanWell = $("<div>");
+            var withName = $("<div>");
+            withName.addClass("with-name");
+            withName.append(participatingFriend);
+            futurePlanWell.addClass("future-plan-well");
+            futurePlanWell.append(futurePlanHold);
+            futurePlanHold.append(futurePlan);
+            futurePlanHold.append(withName);
+
+            //append future plan to relevant day. 
+            $("#" + selectedDay + "-div").append(futurePlanWell);
+
+
+
+
+
+
+            //end of get request for relevant next see data 
+        });
+
+
+
+        //end of get user data request 
+    })
+
+    //end of updateSchedule function
 }
-
-console.log(friendScheduleInfo);
-
-//grab the next see associated with both the username and the position
-
-$.get("/api/schedule/" + userName + "/" + idValue,  function(data){
-
-
-
-
-var futurePlan = data[0].body;
-
-
-//create a container for the futurePlan
-var futurePlanHold = $("<div>");
-futurePlanHold.addClass("future-plan-hold");
-var futurePlanWell = $("<div>");
-var withName = $("<div>");
-withName.addClass("with-name");
-withName.append(participatingFriend);
-futurePlanWell.addClass("future-plan-well");
-futurePlanWell.append(futurePlanHold);
-futurePlanHold.append(futurePlan);
-futurePlanHold.append(withName);
-
-//append future plan to relevant day. 
-$("#" + selectedDay +"-div").append(futurePlanWell);
-
-
-
-
-
-
-//end of get request for relevant next see data 
-});
-
-
-
-//end of get user data request 
-})
-
-//end of updateSchedule function
-}
-

@@ -120,12 +120,14 @@ var relevantPhotoId = this.id;
 console.log(relevantPhotoId);
 //grab the id value for storage in the database
 		var IdValue = relevantPhotoId.slice(13)
-		console.log(IdValue);
+		// console.log(IdValue);
 
 
 var relevantPhoto = document.getElementById(relevantPhotoId);
 
-var relevantInputId = relevantPhoto.nextSibling.nextSibling.id;
+// console.log(relevantPhoto);
+// console.log(relevantPhoto.nextSibling.id);
+var relevantInputId = relevantPhoto.nextSibling.nextSibling.nextSibling.id;
 
 var relevantInput = document.getElementById(relevantInputId);  
 console.log(relevantInput);

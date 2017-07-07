@@ -233,7 +233,7 @@ app.get("/api/schedule/:userEmail/:IdValue", function(req, res) {
         userEmail: req.params.userEmail,
         updateId: req.params.IdValue
       },
-      include: [db.User]
+      order:[ ['createdAt', 'DESC'] ],      
     }).then(function(dbNextSees) {
       res.json(dbNextSees);
 

@@ -528,7 +528,10 @@ background-color: rgba(221, 160, 221,.7);
 .logo{
 
 	border-radius: 30px;
-	border: solid plum 2px;
+	border-top: solid plum 3.85px;
+	border-right: solid plum 3.85px;
+	border-bottom: solid plum 2px;
+	border-left: solid plum 4.25px;
 	overflow:contain;
 	position:relative;
 	bottom:5px;
@@ -537,6 +540,32 @@ background-color: rgba(221, 160, 221,.7);
 	padding-left: .5px;
 
 }
+
+
+.logo:hover{
+
+		border-left: solid plum 7px;
+		border-right: solid plum 1.2px;
+		border-top: solid plum 2px;
+		border-bottom: solid plum 3.25px;
+}
+
+.upload-msg{
+
+	position: relative;
+	z-index: 300;
+	bottom: 127px;
+	height: 18px;
+	width: 110px;
+	left:6px;
+	color:plum;
+	visibility: hidden;
+
+
+}
+
+
+
 
 
 /*====================*/
@@ -734,7 +763,7 @@ margin-top:50px;
 	border-bottom: solid MidnightBlue 2px;	
 	color: plum;
 	width:110px;
-	height:45px;
+	height:58px;
 	margin-left: 8px;
 	margin-right: 8px;
 	overflow:scroll;

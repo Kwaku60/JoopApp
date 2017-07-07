@@ -443,6 +443,25 @@ function updateNext(userName) {
 
 
 
+// ================
+// smaller features
+// ================
 
+
+
+$(".uploaded-profile").mouseenter (function(){
+
+$(".upload-msg").css("visibility","visible")
+ 
+
+
+    });
+
+
+     $(".uploaded-profile").mouseleave (function(){
+
+$(".upload-msg").css("visibility","hidden"); 
+
+    });
 
 
