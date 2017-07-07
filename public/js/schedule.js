@@ -171,7 +171,7 @@ function updateSchedule(friendNameId, selectedDay, participatingFriend) {
             futurePlanWell.addClass("future-plan-well");
             futurePlanWell.append(futurePlanHold);
             futurePlanHold.append(futurePlan);
-            futurePlanHold.append(withName);
+            futurePlanHold.prepend(withName);
 
             //append future plan to relevant day. 
             $("#" + selectedDay + "-div").append(futurePlanWell);

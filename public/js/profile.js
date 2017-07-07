@@ -77,9 +77,17 @@ return user;
   })
 
 
+
+
+var uploadHold = $("#friend-photo-" + updateId);
+console.log(uploadHold);
+var upload = uploadHold[0].src;
+
+
+$("#profile-friend-image-actual").attr("src", upload);
+//end of profileView onClick
 })
-//grab friend last seen data by using the user name and grabbing all of the last seen with the 
-//relevant update id
+
 
 
 
