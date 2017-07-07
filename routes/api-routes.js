@@ -2,6 +2,11 @@
 var db = require("../models");
 var passport = require("../config/passport");
 
+
+//delete shortcut
+
+
+
 module.exports = function(app) {
 
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
@@ -64,12 +69,30 @@ app.get("/api/friends/:id", function(req, res) {
   });
 
 
+app.get("/api/friendsQuick/:id", function(req, res) {
+
+   
+    db.FriendNames.findAll({
+      where: {
+        userEmail: req.params.id
+      },
+      order: [ [ 'updateId', 'ASC' ]],
+      include: [db.User]
+    }).then(function(dbFriendNames) {
+      res.json(dbFriendNames);
+
+    });
+
+  });
+
+
 app.post("/api/profilePhoto", function(req,res){
 
+console.log(req.body);
 
     db.FriendProfileImages.create(
 
-    { image: req.body.binary,
+    { image: req.body.image,
       userEmail: req.body.userEmail,
       updateId: req.body.updateId
 
@@ -162,6 +185,19 @@ app.get("/api/last/:id", function(req, res) {
 
   });
 
+//delete any previous instance
+app.delete("/api/friendsClear/:param1/:param2", function(req,res){
+
+db.FriendNames.destroy({
+    where: {
+          userEmail: req.params.param1,
+        updateId: req.params.param2
+    }
+})
+
+
+})
+
 //create a name
 app.post("/api/friends", function(req, res) {
     db.FriendNames.create(req.body).then(function(dbFriendNames) {
@@ -185,6 +221,27 @@ app.post("/api/last", function(req, res) {
       res.json(dbLastSees);
     });
   });
+
+
+//grab relevant plans from next see 
+
+app.get("/api/schedule/:userEmail/:IdValue", function(req, res) {
+
+   
+    db.NextSees.findAll({
+      where: {
+        userEmail: req.params.userEmail,
+        updateId: req.params.IdValue
+      },
+      include: [db.User]
+    }).then(function(dbNextSees) {
+      res.json(dbNextSees);
+
+
+    });
+
+  });
+
 
 
 

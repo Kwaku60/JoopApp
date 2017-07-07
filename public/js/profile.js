@@ -1,5 +1,6 @@
 //**** profile UI functionality *****
 
+var user;
 
 $("#previous-hangouts-list-head").on("click",function(){
 
@@ -42,7 +43,7 @@ var updateIdFull = this.id
 
   $.get("/api/user_data").then(function(data) {
 
-  	var user = data.email;
+  	 user = data.email;
   	console.log(user);
   	console.log(updateId);
 
@@ -69,7 +70,7 @@ $("#memory-well").append(entryHold);
 //end of get profile text request
 })
 
-
+return user;
 
 
 //end of get user data request
@@ -175,6 +176,7 @@ relevantInput.click();
                             	updateId: IdValue,
                             	userEmail: user
                             }
+                           
 
  $.post("/api/profilePhoto", ProfilePhotoData, function() {
 

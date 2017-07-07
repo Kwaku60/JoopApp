@@ -250,6 +250,42 @@ function updateName(userName) {
 
 
         function submitName() {
+//***JULY EDIT***
+// route to destroy existing friends in that position
+
+ var param1 = newName.userEmail;
+ var param2 = newName.updateId;
+
+
+
+//create shortcut for delete
+$.delete = function(url, data, callback, type){
+ 
+  if ( $.isFunction(data) ){
+    type = type || callback,
+        callback = data,
+        data = {}
+  }
+ 
+  return $.ajax({
+    url: url,
+    type: 'DELETE',
+    success: callback,
+    data: data,
+    contentType: type
+  });
+}
+
+
+
+
+
+$.delete("/api/friendsClear/" + param1 + "/" + param2, function(data){
+
+
+});
+
+
 
 	// alert("submitting name");
             //post the newName object to the database to the FriendNames table 

@@ -1,11 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
+  let Sequelize = sequelize.Sequelize;
+  //console.log(sequelize.Sequelize);
   var FriendProfileImages = sequelize.define("FriendProfileImages", {
     image: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      type: Sequelize.BLOB('long'),
+      allowNull: false
 
   },
 
