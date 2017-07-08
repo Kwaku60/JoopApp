@@ -16,8 +16,8 @@ color: red;
 
 #body{
 
-	
-/*		background-size: 100%;*/
+		background-image: url(images/bricks.jpg);
+		/*background-size: 100%;*/
 /*opacity:.7;*/
 }
 
@@ -623,7 +623,7 @@ background-color: #F3E8F3;
 	margin-left:2px;
 	background-color: white;
 	overflow:scroll;
-	background-image: url(images/upfeathers.png);
+	background-image: url(images/leaves.jpg);
 	background-size: contain;
 
 
@@ -636,7 +636,7 @@ background-color: white;
 	width: 140px;
 	height: 200px;
 	overflow: scroll;
-background-image: url(images/upfeathers.png);
+background-image: url(images/leaves.jpg);
 
 }
 
