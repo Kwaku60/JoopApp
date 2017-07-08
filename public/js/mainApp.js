@@ -362,7 +362,7 @@ console.log(newLastPost);
 
             //post the newLastPost object to the database to the LastSee table 
             $.post("/api/last", newLastPost, function() {
-                window.location.href = "/members";
+               
             });
 
             //end of submitName function        

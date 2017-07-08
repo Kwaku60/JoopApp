@@ -13,9 +13,17 @@ color: red;
 
 }
 
+#body{
+
+	
+/*		background-size: 100%;*/
+/*opacity:.7;*/
+}
+
 #background{
 
 	background-color: rgb(128, 0, 0);
+
 }
 
 #form-welcome {
@@ -77,7 +85,7 @@ border-radius: 12px;
 	color:white;
 	background-color: red;
 	margin-left: 1194px;
-	font-family: 'Inconsolata', monospace;
+	font-family: 'Kaushan Script';
 	border-radius: 40px;
 	height:43px;
 }
@@ -117,7 +125,9 @@ border-radius: 12px;
 
 	background-color: white;
 	height: 297px;
-		border: solid red 1.5px;
+		border: solid red 2px;
+		border-bottom: solid red 3px;
+		border-top: solid red 3.45px;
 		margin-top: 30px;
 		border-radius: 10.5px;
 		/*font-family: 'Open Sans Condensed', sans-serif;*/
@@ -158,15 +168,18 @@ top:212px;
 
 .name-update{
 	position: relative;
-	top:220px;
-	right:647px;
-	width:19px;
-	height:16px;
-	font-size: 10px;
+	color:rgb(255, 227, 68);
+	top:222px;
+	right:710px;
+	font-weight: 4em;
+	width:69px;
+	height:20px;
+	font-size: 11.1px;
 	background-color: maroon;
 	border: solid plum 2px;
 	border-radius: 9px;
 	padding-left: 5px;
+
 
 
 }
@@ -244,6 +257,7 @@ top:212px;
 	position: relative;
 	bottom:58px;
 	left:180px;
+	border: solid plum 2.6px;
 }
 
 
@@ -272,10 +286,10 @@ top:212px;
 	border: solid white 1px;
 	color:black;
 	float: left;
-	margin-top: 30px;
-	height:70px;
-	margin-left: 5px;
-		width:70px;
+	margin-top: 12px;
+	height:50px;
+	margin-left: 43px;
+		width:50px;
 		border: solid white 5px;
 		border-radius: 42px;
 
@@ -285,10 +299,10 @@ top:212px;
 .reset-int{
 	border: solid white 1px;
 	color:black;
-	
+display:none;
 	background-color: PowderBlue;
-		margin-top: 35px;
-		margin-left: 25px;
+		margin-top: 33px;
+		margin-left: 28px;
 		height:50px;
 		width:50px;
 		border: solid white 5px;
@@ -313,7 +327,7 @@ top:212px;
 
 .btn{
 
-	border: solid plum 1.5px;
+	border: solid plum 1.8px;
 	background-color: maroon;
 	color:white;
 	/*background-color: rgb(104,54,16);*/
@@ -349,9 +363,11 @@ height:100px;
 
 #add-new{
 
-	margin-left: 440px;
+	margin-left: 406px;
 	margin-top: 30px;
 	margin-bottom: 40px;
+	font-size: 17px;
+	font-family: 'PT Mono', monospace;
 }
 
 /*=======*/
@@ -383,7 +399,7 @@ height: 260px;
 	color: white;
 	width:120px;
 	height:30px;
-
+font-family: 'PT Mono', monospace;
 	float: left;
 	position: relative;
 	top: 14px;
@@ -394,6 +410,7 @@ height: 260px;
 #previous-hangouts-list-head:hover{
 
 	color:plum;
+
 }
 
 #photos-collection-head{
@@ -404,6 +421,7 @@ height: 260px;
 	height:30px;
 	position:relative;
 	top:14px;
+	font-family: 'PT Mono', monospace;
 
 }
 
@@ -467,6 +485,9 @@ height: 260px;
 	position: absolute;
 	top:10px;
 	right:8px;
+	font-size: 14.2px;
+	font-family: 'Kaushan Script';
+	background-color: indigo;
 }
 
 #photo-collection{
@@ -486,7 +507,7 @@ background-color: rgba(255, 215, 0,.89);
 
 #memory-well{
 
-background-color: rgba(221, 160, 221,.7);
+background-color: rgba(221, 160, 221,.42);
 	border: solid pink 2px;
 	height: 418px;
 	width: 619px;
@@ -513,6 +534,7 @@ background-color: rgba(221, 160, 221,.7);
 	border-bottom: solid maroon 3.5px;
 	font-family: 'Indie Flower', cursive;
 /*	font-family: 'Zilla Slab', serif;*/
+background-color: #F3E8F3;
 }
 
 
@@ -600,6 +622,9 @@ background-color: rgba(221, 160, 221,.7);
 	margin-left:2px;
 	background-color: white;
 	overflow:scroll;
+	background-image: url(images/upfeathers.png);
+	background-size: contain;
+
 
 }
 
@@ -610,6 +635,7 @@ background-color: white;
 	width: 140px;
 	height: 200px;
 	overflow: scroll;
+background-image: url(images/upfeathers.png);
 
 }
 
@@ -652,19 +678,29 @@ margin-top:50px;
 
 	color: white;
 	margin-left: 14px;
+	font-family: 'Kaushan Script';
+	font-size: 17px;
+	margin-bottom: 8px;
 }
 
 .day-title{
 
 	color: gold;
 	margin-left: 32px;
-}
+	font-size: 16.25px;
+	font-family: 'PT Mono', monospace;
+
+	}
 
 #refresh-week{
 
 	background-color: plum;
+	height:29px;
+	font-size: 16px;
+	padding-bottom: 26px;
 	margin-right: 38px;
 	border:solid red 1.38px;
+	font-family: 'Kaushan Script';
 
 }
 
@@ -728,6 +764,7 @@ margin-top:50px;
 	background-color: indigo;
 	margin-left: 970px; 
 	margin-top: 23px;
+	font-family: 'Kaushan Script', cursive;
 }
 
 
@@ -740,6 +777,7 @@ margin-top:50px;
 	position:relative;
 	top:55px;
 	border-bottom: solid orange 4px;
+	font-family: 'PT Mono', monospace;
 }
 
 #view-schedule:hover{
