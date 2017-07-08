@@ -501,6 +501,7 @@ background-color: rgba(255, 215, 0,.89);
 	left:12px;
 	display:none;
 	width: 619px;
+	overflow:scroll;
 
 
 }
@@ -822,5 +823,75 @@ margin-top:50px;
 	width: 195px;
 	height:256px;
 	border-radius: 120px;
+
+}
+
+
+#memory-photo-1{
+
+position:relative;
+left:400px;
+top:4px;
+border: solid plum 1px;
+border-radius: 2px;
+width:178px;
+margin-top: 6px;
+height: 192px;
+
+
+}
+
+#memory-photo-2{
+
+position:relative;
+left:400px;
+top:4px;
+border: solid plum 1px;
+border-radius: 2px;
+width:178px;
+margin-top: 6px;
+height: 192px;
+
+
+}
+
+#memory-photo-3{
+
+position:relative;
+left:400px;
+top:4px;
+border: solid plum 1px;
+border-radius: 2px;
+width:178px;
+margin-top: 6px;
+height: 192px;
+
+}
+
+#memory-photo-4{
+
+position:relative;
+left:400px;
+top:4px;
+border: solid plum 1px;
+border-radius: 2px;
+width:178px;
+margin-top: 6px;
+height: 192px;
+
+
+}
+
+#memory-photo-5{
+	
+position:relative;
+left:400px;
+top:4px;
+border: solid plum 1px;
+border-radius: 2px;
+width:178px;
+margin-top: 6px;
+height: 192px;
+
 
 }

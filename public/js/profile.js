@@ -30,7 +30,7 @@ $("#photo-collection").show();
 //wrap the below in a click function
 $(".profile-view").on("click", function(){
 
-
+$(".mem").attr("src", "css/images/city.jpg");
 //grab the id of the button clicked 
 var updateIdFull = this.id
 
