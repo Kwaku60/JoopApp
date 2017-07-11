@@ -1,6 +1,7 @@
 //**** profile UI functionality *****
 
 var user;
+var getMemoryFunctionGlobal;
 
 $("#previous-hangouts-list-head").on("click",function(){
 
@@ -21,7 +22,25 @@ $("#photo-collection").show();
     });
 
 
+//****global functions****
 
+// create shortcut for delete
+$.delete = function(url, data, callback, type){
+ 
+  if ( $.isFunction(data) ){
+    type = type || callback,
+        callback = data,
+        data = {}
+  }
+ 
+  return $.ajax({
+    url: url,
+    type: 'DELETE',
+    success: callback,
+    data: data,
+    contentType: type
+  });
+}
 
 
 
@@ -29,6 +48,7 @@ $("#photo-collection").show();
 
 //wrap the below in a click function
 $(".profile-view").on("click", function(){
+
 
 $(".mem").attr("src", "css/images/city.jpg");
 //grab the id of the button clicked 
@@ -46,7 +66,7 @@ var updateIdFull = this.id
   	 user = data.email;
   	console.log(user);
   	console.log(updateId);
-
+ getMemoryFunctionGlobal = function(){
 
 $.get("/api/profileText/" + user + "/" + updateId, function(data) {
 
@@ -56,16 +76,27 @@ for(var a= 0; a<data.length; a++){
 
 
 var entry = data[a].body;
-console.log(entry);
 
+var deletebtn = $("<btn>");
+deletebtn.addClass("memory-delete-btn");
+deletebtn.attr("id", "memory-delete-btn-" + a );
+deletebtn.text("X");
 var entryHold = $("<div>");
 entryHold.addClass("entry-hold");
+entryHold.append(deletebtn);
 entryHold.append(entry);
+
 
 $("#memory-well").append(entryHold);
 
+
+
+
+
 //end of loop	
 }
+
+
 
 //end of get profile text request
 })
@@ -73,8 +104,19 @@ $("#memory-well").append(entryHold);
 return user;
 
 
+
+}
+
+getMemoryFunctionGlobal();
+
 //end of get user data request
   })
+
+
+
+
+
+
 
 
 
@@ -219,5 +261,57 @@ relevantInput.click();
 
 //end of logo onClick function 
 });
+
+
+
+
+// ======================
+// memory functionality
+
+
+$(document).on("click",".memory-delete-btn", function(){
+// $(".memory-delete-btn").on("click", function(){
+  alert("running");
+var deleteId = this.id;
+console.log(deleteId);
+var deleteTag = $("#" + deleteId);
+var rawPost = deleteTag.parent().text(); 
+console.log(rawPost);
+var PostContent = rawPost.slice(1);
+console.log(PostContent);
+console.log(user);
+
+
+//function to passs the rawPost text and userEmail to the database to delete this specific memory.
+
+
+//create object with user and memory body
+
+var MemoryToDelete = {
+
+user: user,
+body: PostContent
+
+}
+
+
+
+$.delete("/api/deleteMemory", MemoryToDelete ,function(data){
+
+
+});
+
+
+
+
+getMemoryFunctionGlobal();
+
+// global function to load memories again after deletion
+
+  //end of memory btn onClicK
+})
+
+
+
 
 

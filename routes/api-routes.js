@@ -243,6 +243,24 @@ app.get("/api/schedule/:userEmail/:IdValue", function(req, res) {
   });
 
 
+//deleteMemories
+//delete any previous instance
+app.delete("/api/deleteMemory/", function(req,res){
+
+db.LastSees.destroy({
+    where: {
+          userEmail: req.body.user,
+          body: req.body.body
+    }
+})
+
+
+})
+
+
+
+
+
 
 
 };

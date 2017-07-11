@@ -539,6 +539,31 @@ background-color: rgba(221, 160, 221,.42);
 background-color: #F3E8F3;
 }
 
+.memory-delete-btn{
+
+	width: 60px;
+	height:10px;
+	margin-top: 0px;
+	position: relative;
+	top: 50px;
+	left:84px;
+	margin-right: 10px;
+	font-size:18px;
+	color:orange;
+	background-color: plum;
+	border-radius: 75px;
+	border: solid plum 1.5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+.memory-delete-btn:hover{
+
+	border: solid maroon 1.5px;
+}
+
 
 #uploaded-profile{
 

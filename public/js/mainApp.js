@@ -298,7 +298,7 @@ $.delete("/api/friendsClear/" + param1 + "/" + param2, function(data){
 
         // calling function
         submitName(newName);
-alert("updated!");
+// alert("updated!");
 
         //end of update-name on click listener
     })

@@ -14,6 +14,8 @@ $(".add-to-sched").on("click", function() {
 
 });
 
+// quick bug fix workaround
+
 
 
 $("#exit-friend-list-quick").on("click", function() {
@@ -29,7 +31,7 @@ $("#exit-schedule").on("click", function() {
 })
 
 $("#view-schedule").on("click", function() {
-
+// $(".name-update").triger("click");
     $("#schedule-jumbo").show();
 })
 
