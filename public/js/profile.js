@@ -271,7 +271,7 @@ relevantInput.click();
 
 $(document).on("click",".memory-delete-btn", function(){
 // $(".memory-delete-btn").on("click", function(){
-  alert("running");
+
 var deleteId = this.id;
 console.log(deleteId);
 var deleteTag = $("#" + deleteId);
