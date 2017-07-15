@@ -179,17 +179,87 @@ function updateSchedule(friendNameId, selectedDay, participatingFriend) {
             $("#" + selectedDay + "-div").append(futurePlanWell);
 
 
-
-
-
-
             //end of get request for relevant next see data 
         });
-
 
 
         //end of get user data request 
     })
 
     //end of updateSchedule function
+}
+
+
+
+
+
+
+
+
+
+// save schedule functionality 
+// =============================
+
+
+$("#save-schedule").on("click", function(){
+       var dayInfo =  $("#Monday-div").find(".with-name");
+
+for(var i= 0; i<dayInfo.length; i++){
+
+var ScheduledFriend = dayInfo[i].innerHTML;
+console.log(ScheduledFriend);
+
+    
+}
+
+// FUTURE FUNCTIONALITY:
+// above code for each day. find out which friends are schedule for each day. 
+// find friend divs and append "seeing Monday" or Seeing Tuesday etc. to particular friend
+// div after clicking on the update schedule button.
+
+
+
+
+
+
+// saveSchedule(userName);
+
+//end of save sched onClick    
+}) 
+
+
+
+
+
+
+
+
+
+function saveSchedule(userName){
+
+
+
+// var Schedule = {
+
+
+//     userEmail: userName,
+//     Monday:,
+//     Teusday:,
+//     Wednesday:,
+//     Thursday:,
+//     Friday:,
+//     Saturday:,
+//     Sunday:,
+// }
+
+
+$.post("/api/schedule", Schedule, function() {
+         
+
+
+            });
+
+
+
+//end of save schedule function
 }

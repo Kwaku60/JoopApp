@@ -191,7 +191,7 @@ $.get("/api/next/" + userName, function(data) {
 
 		var content = data[c].body
 
-		console.log(container);
+
 
 //empty textbox before appending somehow 
 
@@ -299,7 +299,7 @@ $.delete("/api/friendsClear/" + param1 + "/" + param2, function(data){
         // calling function
         submitName(newName);
 // alert("updated!");
-
+  $("#update-confirm").delay(250).show().delay(800).hide("fade",400);
         //end of update-name on click listener
     })
 
@@ -339,7 +339,7 @@ function updateLast(userName) {
 
         var updateLastContainer = document.getElementById("last-text-" + IdIntegerValue);
 
-        console.log(updateLastContainer);
+
 
         var updatedLast = updateLastContainer.value;
 
@@ -355,7 +355,7 @@ function updateLast(userName) {
             updateId: IdIntegerValue
         }
 
-console.log(newLastPost);
+ $("#update-confirm").delay(250).show().delay(800).hide("fade",400);
 
         function submitLast() {
 	
@@ -372,9 +372,12 @@ console.log(newLastPost);
         submitLast(newLastPost);
 
         //end of update-last on click listener
+          $("#update-confirm").delay(250).show().delay(800).hide("fade",400);
     })
 
-    //end of updateLast function 	
+    //end of updateLast function 
+
+
 };
 
 
@@ -418,7 +421,7 @@ function updateNext(userName) {
             updateId: IdIntegerValue
         }
 
-
+ $("#update-confirm").delay(250).show().delay(800).hide("fade",400);
 
         function submitNext() {
 
@@ -435,10 +438,11 @@ function updateNext(userName) {
         submitNext(newNextPost);
 
 
-        //end of update-last on click listener
+        //end of update-next on click listener
+       
     })
 
-    //end of updateLast function 	
+    //end of updateNext function 	
 };
 
 

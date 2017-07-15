@@ -466,13 +466,23 @@ font-family: 'PT Mono', monospace;
 	background-color: maroon;
 	position: fixed;
 	top:54px;
-
 	z-index: 30;
 	display: none;
 
 
 }
 
+
+#update-confirm{
+
+	color: red;
+	font-size: 22px;
+	position:fixed;
+	right:580px;
+	font-family: 'Kaushan Script', cursive;
+	z-index: 500;
+	display: none;
+}
 
 #profile-friend-image{
 
@@ -492,7 +502,7 @@ font-family: 'PT Mono', monospace;
 }
 
 #photo-collection{
-background-color: rgba(255, 215, 0,.89);
+background-color: rgba(255, 215, 0,.439);
 	border: solid black 2px;
 	height:418px;
 	z-index: 40px;
@@ -509,7 +519,7 @@ background-color: rgba(255, 215, 0,.89);
 
 #memory-well{
 
-background-color: rgba(221, 160, 221,.42);
+background-color: rgba(221, 160, 221,.84);
 	border: solid pink 2px;
 	height: 418px;
 	width: 619px;
@@ -637,6 +647,7 @@ background-color: #F3E8F3;
 	overflow: scroll;
 	background-color: maroon;
 	top:124px;
+	bottom:4px;
 	display: none;
 }
 
@@ -735,6 +746,25 @@ margin-top:50px;
 
 	background-color: indigo;
 }
+
+#save-schedule{
+	background-color: plum;
+	height:29px;
+	font-size: 16px;
+	padding-bottom: 26px;
+	margin-right: 78px;
+	border:solid red 1.38px;
+	font-family: 'Kaushan Script';
+	display:none;
+
+}
+
+
+#save-schedule:hover{
+
+	background-color: indigo;
+}
+
 
 #friend-list-quick{
 

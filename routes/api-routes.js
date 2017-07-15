@@ -257,6 +257,34 @@ db.LastSees.destroy({
 
 })
 
+//create a schedule instance in the database 
+
+
+app.post("/api/schedule", function(req, res) {
+    db.Schedule.create(req.body).then(function(dbSchedule) {
+      res.json(dbSchedule);
+    });
+  });
+
+
+
+//grab past schedule
+
+app.get("/api/prevSchedule/:userEmail/", function(req, res) {
+
+   
+    db.Schedule.findAll({
+      where: {
+        userEmail: req.params.userEmail
+      },
+      order:[ ['createdAt', 'DESC'] ],      
+    }).then(function(dbSchedule) {
+      res.json(dbSchedule);
+
+
+    });
+
+  });
 
 
 
