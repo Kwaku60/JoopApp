@@ -168,10 +168,10 @@ top:212px;
 }
 
 .name-update{
-	position: relative;
+/*	position: absolute;*/
 	color:rgb(255, 227, 68);
-	top:222px;
-	right:710px;
+/*	top:222px;
+	right:710px;*/
 	font-weight: 4em;
 	width:69px;
 	height:20px;
@@ -179,6 +179,8 @@ top:212px;
 	background-color: maroon;
 	border: solid plum 2px;
 	border-radius: 9px;
+	margin-left: 30px;
+	margin-bottom: 20px;
 	padding-left: 5px;
 
 
@@ -256,7 +258,7 @@ top:212px;
 
 	border-radius: 6px;
 	position: relative;
-	bottom:58px;
+	bottom:30px;
 	left:180px;
 	border: solid plum 2.6px;
 }
