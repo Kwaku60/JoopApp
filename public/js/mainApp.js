@@ -43,7 +43,7 @@ var userName = data.email
 
 getFriendNames(userName);
 
-getProfilePhotos(userName);
+// getProfilePhotos(userName);
 
 updateName(userName);
 
