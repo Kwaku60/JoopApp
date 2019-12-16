@@ -65,7 +65,6 @@ function getFriendNames(userName){
 //get request to grab all of the FriendNames from the database based on the username
 $.get("/api/friends/" + userName, function(data) {
 
-	// alert("getting names");
 
 	// loop through data and append to relevant div
 
@@ -81,8 +80,6 @@ $.get("/api/friends/" + userName, function(data) {
 
 		insertContent(container, content);
 	}
-
-
 
 //end of get friends request
   });

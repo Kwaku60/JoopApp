@@ -14,9 +14,6 @@ $(".add-to-sched").on("click", function() {
 
 });
 
-// quick bug fix workaround
-
-
 
 $("#exit-friend-list-quick").on("click", function() {
 
@@ -31,7 +28,7 @@ $("#exit-schedule").on("click", function() {
 })
 
 $("#view-schedule").on("click", function() {
-// $(".name-update").triger("click");
+
     $("#schedule-jumbo").show();
 })
 
@@ -75,14 +72,9 @@ function grabQuickFriendList(selectedDay) {
                 nameHold.append(data[a].name);
                 $("#friend-list-quick-well").append(nameHold);
 
-
-
-                //end of loop
             }
 
             $(".friend-list-name-item").on("click", function() {
-
-
 
                 var friendNameId = this.id;
 
@@ -119,14 +111,7 @@ function grabQuickFriendList(selectedDay) {
 
 function updateSchedule(friendNameId, selectedDay, participatingFriend) {
 
-    var idValueRaw = friendNameId.slice(13);
-
-
-
-
-
-
-  
+    var idValueRaw = friendNameId.slice(13);  
 
     var primaryValue = parseInt(idValueRaw)
 
@@ -156,9 +141,6 @@ function updateSchedule(friendNameId, selectedDay, participatingFriend) {
         //grab the next see associated with both the username and the position
 
         $.get("/api/schedule/" + userName + "/" + idValue, function(data) {
-
-
-
 
             var futurePlan = data[0].body;
 
